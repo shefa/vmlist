@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VMList</string>
+    <string name="tab_text_1">List</string>
+    <string name="tab_text_2">Map</string>
+    <string name="empty_blank_fragment">No stuff to buy, Wohoo!</string>
+
+    <string name="add_task_title">Add a new item</string>
+    <string name="add_task_msg">What do you want to buy next?</string>
+    <string name="edit_task_title">Edit item</string>
+
+    <string name="add_shop_tip">Click on map to add new shop</string>
+    <string name="add_shop_tip2">Press the plus button if you wish to add new shop</string>
+    <string name="add_shop_title">Add a new shop location</string>
+    <string name="edit_shop_title">Edit shop</string>
+    <string name="add_shop_msg">Name of the shop?</string>
+
+    <string name="text_location_permission">Allow VMList to use your location?</string>
+    <string name="title_location_permission">Location permission request</string>
+</resources>
