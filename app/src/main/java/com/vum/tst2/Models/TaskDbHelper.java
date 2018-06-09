@@ -1,4 +1,4 @@
-package com.vum.tst2.db;
+package com.vum.tst2.Models;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,8 +7,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class TaskDbHelper extends SQLiteOpenHelper {
 
+    public static final String DB_NAME = "com.vum.tst2.db";
+    public static final int DB_VERSION = 1;
+
     public TaskDbHelper(Context context) {
-        super(context, TaskContract.DB_NAME, null, TaskContract.DB_VERSION);
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
