@@ -17,7 +17,7 @@ import com.vum.tst2.Models.ShopTaskContract;
 import com.vum.tst2.Models.TaskContract;
 import com.vum.tst2.Models.TaskDbHelper;
 import com.vum.tst2.R;
-import com.vum.tst2.Views.BlankFragment;
+import com.vum.tst2.Views.ListFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -243,7 +243,7 @@ public class ListActivity {
             hasItems=true;
         }
 
-        BlankFragment bf = (BlankFragment) contextActivity.mViewPager.getAdapter().instantiateItem(contextActivity.mViewPager,0);
+        ListFragment bf = (ListFragment) contextActivity.mViewPager.getAdapter().instantiateItem(contextActivity.mViewPager,0);
         View v = bf.getViewCustom();
 
         if(contextActivity.mTaskListView==null) contextActivity.mTaskListView = (ListView) v.findViewById(R.id.list_todo);

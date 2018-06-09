@@ -1,12 +1,8 @@
 package com.vum.tst2.Activities;
 
 import android.app.AlertDialog;
-import android.content.ContentValues;
 import android.content.DialogInterface;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,29 +11,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.vum.tst2.Views.BlankFragment;
+import com.vum.tst2.Views.ListFragment;
 import com.vum.tst2.Views.MapFragment;
 import com.vum.tst2.R;
-import com.vum.tst2.Models.ShopContract;
-import com.vum.tst2.Models.ShopTaskContract;
-import com.vum.tst2.Models.TaskContract;
 import com.vum.tst2.Models.TaskDbHelper;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mapActivity = new MapActivity(mHelper,this);
         listActivity = new ListActivity(mHelper, this);
 
-        // moved this code to run after BlankFragment's initialization
+        // moved this code to run after ListFragment's initialization
         //if(mViewPager.getCurrentItem()==0) updateUI();
     }
 
@@ -101,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            if(position==0) return BlankFragment.newInstance();
+            if(position==0) return ListFragment.newInstance();
             return new MapFragment();
         }
 
